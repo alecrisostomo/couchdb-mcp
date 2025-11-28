@@ -25,7 +25,7 @@ class CouchDBServer {
   constructor() {
     this.server = new Server(
       {
-        name: 'couchdb-mcp-server',
+        name: 'couchdb-mcp',
         version: '0.1.0',
       },
       {
