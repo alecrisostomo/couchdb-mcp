@@ -5,16 +5,16 @@
   "private": true,
   "type": "module",
   "bin": {
-    "couchdb-mcp": "./build/index.js"
+    "couchdb-mcp": "./build/main.js"
   },
   "files": [
     "build"
   ],
   "scripts": {
-    "build": "tsc && chmod +x build/index.js",
+    "build": "tsc && chmod +x build/main.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector build/main.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
