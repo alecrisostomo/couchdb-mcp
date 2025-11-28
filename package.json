@@ -11,10 +11,13 @@
     "build"
   ],
   "scripts": {
-    "build": "tsc && chmod +x build/main.js",
+    "build": "npx tsc && chmod +x build/main.js",
     "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/main.js"
+    "watch": "npx tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/main.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "0.6.0",
@@ -23,6 +26,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
-    "typescript": "^5.3.3"
+    "@vitest/ui": "^2.1.9",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.9"
+  },
+  "overrides": {
+    "esbuild": "^0.25.0"
   }
 }
